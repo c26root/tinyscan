@@ -1,0 +1,2 @@
+https://github.com/rapid7/metasploit-framework/pull/9473
+https://github.com/worawit/MS17-010

